@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class SDA5_Ex1 {
     public static void main(String[] args) {
@@ -25,6 +26,15 @@ public class SDA5_Ex1 {
 
         System.out.println(getAverageCharacteristics(characteristics));
     }
+    //EROARE LA COLECTARE IN MAPA PENTRU CA GASESTE MAI MULTE CHEI IDENTICE
+//    public static Map<String, Double> getAverageCharacteristics1(List<Map<String,Double>> characteristicsList){
+//        Map<String,Double> average = new HashMap<>();
+//        Map<String,Double> fullMap = new HashMap<>();
+//        fullMap =characteristicsList.stream()
+//                .flatMap(characteristics->characteristics.entrySet().stream())
+//                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+//        return fullMap;
+//    }
     public static Map<String, Double> getAverageCharacteristics(List<Map<String,Double>> characteristicsList){
         Map<String,Double> average = new HashMap<>();
         Map<String, Integer> counter =new HashMap<>();
