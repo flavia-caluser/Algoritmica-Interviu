@@ -1,12 +1,11 @@
-package org.example;
+package org.example.SDA5;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
-public class SDA5_Ex1 {
+public class Ex1 {
     public static void main(String[] args) {
         List<Map<String,Double>> characteristics = new ArrayList<>();
         Map<String, Double> map1 = new HashMap<>();
